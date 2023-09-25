@@ -6,7 +6,6 @@ const Header = ({isDarkMode, onDarkModeClick}) => {
       <header>
         <button onClick={onDarkModeClick}>{isDarkMode ? 'Dark': 'Light'}  Mode</button>
       </header>
-      Header
     </div>
   )
 }

@@ -17,14 +17,14 @@ function App() {
     setIsDarkMode((isDarkMode) => !isDarkMode);
   }
 
-  // function handleDarkModeClick() {
-  //   setIsDarkMode((prevDarkMode) => !prevDarkMode);
-  // }
+  function handleDarkModeClick() {
+    setIsDarkMode((prevDarkMode) => !prevDarkMode);
+  }
 
   return (
-    <div className={"App " + (isDarkMode ? "light" : "dark")}>
-      <Header>
-        {/* isDarkMode={isDarkMode} onDarkModeClick = {handleDarkModeClick} > */}
+    <div className={"App " + (isDarkMode ? "dark" : "light")}>
+      <Header isDarkMode={isDarkMode} onDarkModeClick = {handleDarkModeClick} >
+        
         <h2>Shopster</h2>
         <button onClick={onDarkModeClick}>
           {isDarkMode ? "Dark" : "Light"} Mode
@@ -37,3 +37,29 @@ function App() {
 }
 
 export default App;
+
+// import React, { useState } from "react";
+// import ShoppingList from "./ShoppingList";
+// import itemData from "../data/items";
+
+// function App() {
+//   const [isDarkMode, setIsDarkMode] = useState(false);
+
+//   function onDarkModeClick() {
+//     setIsDarkMode((isDarkMode) => !isDarkMode);
+//   }
+
+//   return (
+//     <div className={"App " + (isDarkMode ? "dark" : "light")}>
+//       <header>
+//         <h2>Shopster</h2>
+//         <button onClick={onDarkModeClick}>
+//           {isDarkMode ? "Dark" : "Light"} Mode
+//         </button>
+//       </header>
+//       <ShoppingList items={itemData} />
+//     </div>
+//   );
+// }
+
+// export default App;
